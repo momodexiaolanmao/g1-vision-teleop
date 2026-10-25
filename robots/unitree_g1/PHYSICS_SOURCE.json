@@ -1,0 +1,12 @@
+{
+  "source": "SOURCE.json",
+  "scene": "scene_physics.xml",
+  "changes": [
+    "torque motors using upstream force limits",
+    "gravity and finite foot friction",
+    "slightly bent-knee initial stance"
+  ],
+  "root": "unactuated free joint",
+  "external_root_forces": false,
+  "controller": "Constrained inverse dynamics in double support; no learned policy"
+}

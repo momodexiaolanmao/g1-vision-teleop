@@ -1,0 +1,1042 @@
+{
+  "analysis_date": "2026-10-22",
+  "sources": {
+    "S1": {
+      "path": ".\\artifacts\\camera_full_models_trace.jsonl",
+      "sha256": "1c1afa432569712300c4d0acd6b91430c2a79cc426359eca2b6c03e231852790",
+      "description": "同一相机帧的 Full 单人 / 最多三人配置关键点输出"
+    },
+    "S2": {
+      "path": ".\\artifacts\\unitree_g1_pose_stability.json",
+      "sha256": "4e36c4e050c8f2b4c7660d7bd4056b22b41feff11b21d7dc1dffb0cd454f714b",
+      "description": "同帧 Lite/Full、质量过滤关闭/开启的角度记录"
+    },
+    "S3": {
+      "path": ".\\course_evidence_20261022\\data\\replay_paired_20261022.json",
+      "sha256": "946bca75b94e236bff09f0558e38161992141ecb961f84c93a9cad26a52bce45",
+      "description": "本次重跑：历史输入与当前控制器的同采样时刻物理回放"
+    },
+    "S4": {
+      "path": ".\\artifacts\\step_entry_control_20261012.jsonl",
+      "sha256": "3ec4f396382646862f6704b558222c83eef9c053ab4385940dfc26ecd6338ac0",
+      "description": "2026-10-12 原始控制输入和机器人状态记录"
+    },
+    "S5": {
+      "path": ".\\artifacts\\debug_step_entry_live_fk.json",
+      "sha256": "43e48a187c001ab06b6472829b2208994937b8bb3b0346b429ccc71eaf2db6f8",
+      "description": "原始活动片段与两段贴地问题的几何诊断"
+    },
+    "S6": {
+      "path": ".\\artifacts\\unitree_g1_repeated_switch_before_fix.json",
+      "sha256": "3ec6c64d2b8d42b0c515ae878775cd3b8412f72d7d9029bef771373ee0f3537b",
+      "description": "修复前重复切换压力记录，上半身跟随强度 0.2"
+    },
+    "S7": {
+      "path": ".\\artifacts\\unitree_g1_repeated_switch_0.20.json",
+      "sha256": "22b51da65facb11682142fe88f9779fc2d51043a8174167d829563870e7fe81e",
+      "description": "修复后重复切换压力记录，上半身跟随强度 0.2"
+    },
+    "S8": {
+      "path": ".\\artifacts\\unitree_g1_step_velocity_live_20261012.json",
+      "sha256": "11ef1f6681f99f595466a2f2a2de750f973df8961bc5dc12850817c9cd72a2fd",
+      "description": "2026-10-12 修复后 25 秒真人相机输入物理采样"
+    }
+  },
+  "person_configuration": {
+    "original_frames_per_mode": 328,
+    "paired_times_after_warmup": 279,
+    "landmarks": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "visibility_threshold": 0.6,
+    "modes": {
+      "full1": {
+        "joints": {
+          "11": {
+            "label": "左肩",
+            "valid_pairs": 278,
+            "p95_px": 2.1885102345858107
+          },
+          "12": {
+            "label": "右肩",
+            "valid_pairs": 278,
+            "p95_px": 1.7972517195235393
+          },
+          "13": {
+            "label": "左肘",
+            "valid_pairs": 278,
+            "p95_px": 4.00925587813612
+          },
+          "14": {
+            "label": "右肘",
+            "valid_pairs": 278,
+            "p95_px": 4.372049598292539
+          },
+          "15": {
+            "label": "左腕",
+            "valid_pairs": 203,
+            "p95_px": 6.126624719307208
+          },
+          "16": {
+            "label": "右腕",
+            "valid_pairs": 225,
+            "p95_px": 5.249659646341464
+          },
+          "23": {
+            "label": "左髋",
+            "valid_pairs": 278,
+            "p95_px": 1.9156383587401842
+          },
+          "24": {
+            "label": "右髋",
+            "valid_pairs": 278,
+            "p95_px": 1.9156612261015233
+          },
+          "25": {
+            "label": "左膝",
+            "valid_pairs": 278,
+            "p95_px": 2.442339131155028
+          },
+          "26": {
+            "label": "右膝",
+            "valid_pairs": 278,
+            "p95_px": 3.580667075082851
+          },
+          "27": {
+            "label": "左踝",
+            "valid_pairs": 278,
+            "p95_px": 2.620596670444872
+          },
+          "28": {
+            "label": "右踝",
+            "valid_pairs": 278,
+            "p95_px": 2.225754548077376
+          }
+        },
+        "median_joint_p95_px": 2.5314679007999503
+      },
+      "full3": {
+        "joints": {
+          "11": {
+            "label": "左肩",
+            "valid_pairs": 278,
+            "p95_px": 4.41941692401414
+          },
+          "12": {
+            "label": "右肩",
+            "valid_pairs": 278,
+            "p95_px": 4.209925147359548
+          },
+          "13": {
+            "label": "左肘",
+            "valid_pairs": 278,
+            "p95_px": 8.44716858416351
+          },
+          "14": {
+            "label": "右肘",
+            "valid_pairs": 278,
+            "p95_px": 8.278454417480976
+          },
+          "15": {
+            "label": "左腕",
+            "valid_pairs": 203,
+            "p95_px": 9.677537372460321
+          },
+          "16": {
+            "label": "右腕",
+            "valid_pairs": 225,
+            "p95_px": 7.84360442547209
+          },
+          "23": {
+            "label": "左髋",
+            "valid_pairs": 278,
+            "p95_px": 4.532210192034722
+          },
+          "24": {
+            "label": "右髋",
+            "valid_pairs": 278,
+            "p95_px": 5.104004049754798
+          },
+          "25": {
+            "label": "左膝",
+            "valid_pairs": 278,
+            "p95_px": 4.940345726612397
+          },
+          "26": {
+            "label": "右膝",
+            "valid_pairs": 278,
+            "p95_px": 5.709182130484295
+          },
+          "27": {
+            "label": "左踝",
+            "valid_pairs": 278,
+            "p95_px": 5.77043779896459
+          },
+          "28": {
+            "label": "右踝",
+            "valid_pairs": 278,
+            "p95_px": 8.258315416048957
+          }
+        },
+        "median_joint_p95_px": 5.739809964724442
+      }
+    },
+    "median_p95_reduction_percent": 55.89631161383787
+  },
+  "filtering": {
+    "frames": 532,
+    "exclude_first_seconds": 2,
+    "channels": 29,
+    "samples_per_channel": 475,
+    "modes": {
+      "lite_raw": {
+        "channels": {
+          "left_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 1.0893471082832737,
+            "p95_frame_change_deg": 0.870334905392059
+          },
+          "left_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.32761617496485784,
+            "p95_frame_change_deg": 0.30661350402321413
+          },
+          "left_elbow_flex": {
+            "samples": 475,
+            "std_deg": 0.7631802498046795,
+            "p95_frame_change_deg": 0.8640913786574305
+          },
+          "left_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.790019363657863,
+            "p95_frame_change_deg": 0.7446900791277156
+          },
+          "left_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.5910012395241475,
+            "p95_frame_change_deg": 0.17242278220469248
+          },
+          "left_hip_yaw": {
+            "samples": 475,
+            "std_deg": 1.1637014182530971,
+            "p95_frame_change_deg": 0.8287316213242854
+          },
+          "left_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.8352658256446829,
+            "p95_frame_change_deg": 1.0032475325412307
+          },
+          "left_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.5008843859006444,
+            "p95_frame_change_deg": 0.628944329044521
+          },
+          "left_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.57428402186749,
+            "p95_frame_change_deg": 0.5391495773741987
+          },
+          "left_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 8.990506516533042,
+            "p95_frame_change_deg": 2.490788090801602
+          },
+          "left_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.70611005337548,
+            "p95_frame_change_deg": 0.8407466651753808
+          },
+          "left_wrist_roll": {
+            "samples": 475,
+            "std_deg": 4.822116162219318,
+            "p95_frame_change_deg": 1.9691108392384027
+          },
+          "left_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.9110376360303575,
+            "p95_frame_change_deg": 0.6663134343397397
+          },
+          "right_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 0.9165258494454658,
+            "p95_frame_change_deg": 0.8882479929742594
+          },
+          "right_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.5999210486891868,
+            "p95_frame_change_deg": 0.4342208556305383
+          },
+          "right_elbow_flex": {
+            "samples": 475,
+            "std_deg": 1.4084357621034698,
+            "p95_frame_change_deg": 1.088936070926047
+          },
+          "right_hip_pitch": {
+            "samples": 475,
+            "std_deg": 1.1047016758771064,
+            "p95_frame_change_deg": 1.8838517982196208
+          },
+          "right_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.6908302020364789,
+            "p95_frame_change_deg": 0.2516768934568057
+          },
+          "right_hip_yaw": {
+            "samples": 475,
+            "std_deg": 1.1996376799303345,
+            "p95_frame_change_deg": 1.140782963980702
+          },
+          "right_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.8683713482497358,
+            "p95_frame_change_deg": 1.046105198917827
+          },
+          "right_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.534522651013969,
+            "p95_frame_change_deg": 0.5643151611003101
+          },
+          "right_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.9411162123779255,
+            "p95_frame_change_deg": 0.6697054956757369
+          },
+          "right_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 6.542848802306082,
+            "p95_frame_change_deg": 2.883533446256832
+          },
+          "right_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.851667856874422,
+            "p95_frame_change_deg": 0.6593258490061262
+          },
+          "right_wrist_roll": {
+            "samples": 475,
+            "std_deg": 4.523105972704268,
+            "p95_frame_change_deg": 2.2605657720956893
+          },
+          "right_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.9954096967031641,
+            "p95_frame_change_deg": 0.6771767665578688
+          },
+          "waist_pitch": {
+            "samples": 475,
+            "std_deg": 0.6444750358239617,
+            "p95_frame_change_deg": 0.6159769993769083
+          },
+          "waist_roll": {
+            "samples": 475,
+            "std_deg": 0.2333180484991577,
+            "p95_frame_change_deg": 0.17029263874548164
+          },
+          "waist_yaw": {
+            "samples": 475,
+            "std_deg": 0.7015139045249366,
+            "p95_frame_change_deg": 0.46599819436099515
+          }
+        },
+        "median_p95_deg": 0.7446900791277156,
+        "median_std_deg": 0.9110376360303575
+      },
+      "lite_filtered": {
+        "channels": {
+          "left_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 1.0527400082963165,
+            "p95_frame_change_deg": 0.5233088883508116
+          },
+          "left_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.307480583649977,
+            "p95_frame_change_deg": 0.16752581682596807
+          },
+          "left_elbow_flex": {
+            "samples": 475,
+            "std_deg": 0.7096794013203536,
+            "p95_frame_change_deg": 0.5384250396682361
+          },
+          "left_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.7609333341851184,
+            "p95_frame_change_deg": 0.3843861487819357
+          },
+          "left_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.586106479793106,
+            "p95_frame_change_deg": 0.0918713418918116
+          },
+          "left_hip_yaw": {
+            "samples": 475,
+            "std_deg": 1.1415298578405422,
+            "p95_frame_change_deg": 0.5130711321262353
+          },
+          "left_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.7901416426560602,
+            "p95_frame_change_deg": 0.527050003318729
+          },
+          "left_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.500569159890105,
+            "p95_frame_change_deg": 0.35909988488629174
+          },
+          "left_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.5501730670655591,
+            "p95_frame_change_deg": 0.2922347851878488
+          },
+          "left_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 8.987785381632891,
+            "p95_frame_change_deg": 1.8831311014568493
+          },
+          "left_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.6512732468001915,
+            "p95_frame_change_deg": 0.4751936163683031
+          },
+          "left_wrist_roll": {
+            "samples": 475,
+            "std_deg": 4.809946061297027,
+            "p95_frame_change_deg": 1.3171072902807532
+          },
+          "left_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.8837678144215789,
+            "p95_frame_change_deg": 0.36985985819322464
+          },
+          "right_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 0.8769673501064483,
+            "p95_frame_change_deg": 0.5252281697862912
+          },
+          "right_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.5803113835432685,
+            "p95_frame_change_deg": 0.24949161110458384
+          },
+          "right_elbow_flex": {
+            "samples": 475,
+            "std_deg": 1.3847129934575466,
+            "p95_frame_change_deg": 0.6335332040602943
+          },
+          "right_hip_pitch": {
+            "samples": 475,
+            "std_deg": 1.003131889199809,
+            "p95_frame_change_deg": 1.0945953497421224
+          },
+          "right_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.6824182415347504,
+            "p95_frame_change_deg": 0.13982935234914176
+          },
+          "right_hip_yaw": {
+            "samples": 475,
+            "std_deg": 1.1542093840133187,
+            "p95_frame_change_deg": 0.6582142502699746
+          },
+          "right_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.8170975848708691,
+            "p95_frame_change_deg": 0.5970225698074112
+          },
+          "right_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.5258084230601021,
+            "p95_frame_change_deg": 0.3511689820729588
+          },
+          "right_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.9192749035902568,
+            "p95_frame_change_deg": 0.40136426934763847
+          },
+          "right_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 6.5200970728890715,
+            "p95_frame_change_deg": 2.1535124308550238
+          },
+          "right_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.8182765417690686,
+            "p95_frame_change_deg": 0.4001264001604167
+          },
+          "right_wrist_roll": {
+            "samples": 475,
+            "std_deg": 4.507612389646155,
+            "p95_frame_change_deg": 1.6910913149170217
+          },
+          "right_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.9703736184571383,
+            "p95_frame_change_deg": 0.39810284139617974
+          },
+          "waist_pitch": {
+            "samples": 475,
+            "std_deg": 0.6264912118388715,
+            "p95_frame_change_deg": 0.3010913336506065
+          },
+          "waist_roll": {
+            "samples": 475,
+            "std_deg": 0.22363164344015177,
+            "p95_frame_change_deg": 0.0899346357501424
+          },
+          "waist_yaw": {
+            "samples": 475,
+            "std_deg": 0.6885442977532756,
+            "p95_frame_change_deg": 0.24210065221622404
+          }
+        },
+        "median_p95_deg": 0.40136426934763847,
+        "median_std_deg": 0.8769673501064483
+      },
+      "full_raw": {
+        "channels": {
+          "left_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 3.138904793766821,
+            "p95_frame_change_deg": 1.8729440659074628
+          },
+          "left_ankle_roll": {
+            "samples": 475,
+            "std_deg": 3.3745077002266473,
+            "p95_frame_change_deg": 1.8768477595737856
+          },
+          "left_elbow_flex": {
+            "samples": 475,
+            "std_deg": 0.7401076021574081,
+            "p95_frame_change_deg": 0.716232347214416
+          },
+          "left_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.5792563611494898,
+            "p95_frame_change_deg": 0.6658734631114666
+          },
+          "left_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.8959327310244782,
+            "p95_frame_change_deg": 0.24888088290082244
+          },
+          "left_hip_yaw": {
+            "samples": 475,
+            "std_deg": 2.117668809891281,
+            "p95_frame_change_deg": 1.7276791536376057
+          },
+          "left_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.7372067422426597,
+            "p95_frame_change_deg": 0.7084233828463542
+          },
+          "left_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.7378842581289733,
+            "p95_frame_change_deg": 0.9897379956909796
+          },
+          "left_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.8356668375150368,
+            "p95_frame_change_deg": 0.4112137135635014
+          },
+          "left_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 3.081808801058229,
+            "p95_frame_change_deg": 1.3311775964253338
+          },
+          "left_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.5565753952162066,
+            "p95_frame_change_deg": 0.5813817217021304
+          },
+          "left_wrist_roll": {
+            "samples": 475,
+            "std_deg": 2.230215620393362,
+            "p95_frame_change_deg": 1.3363664495606957
+          },
+          "left_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.4987372095091317,
+            "p95_frame_change_deg": 0.35711479075978864
+          },
+          "right_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 0.8605847577743843,
+            "p95_frame_change_deg": 0.9926051251104403
+          },
+          "right_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.4769716300523068,
+            "p95_frame_change_deg": 0.5555745461275612
+          },
+          "right_elbow_flex": {
+            "samples": 475,
+            "std_deg": 1.4958158457726887,
+            "p95_frame_change_deg": 1.1491606379241806
+          },
+          "right_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.7194891159543508,
+            "p95_frame_change_deg": 1.1016218955187833
+          },
+          "right_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.7303276002540717,
+            "p95_frame_change_deg": 0.2646447952769089
+          },
+          "right_hip_yaw": {
+            "samples": 475,
+            "std_deg": 2.7580082007800377,
+            "p95_frame_change_deg": 2.653587038884292
+          },
+          "right_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.675001795905848,
+            "p95_frame_change_deg": 0.76331922367773
+          },
+          "right_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.6360420661286936,
+            "p95_frame_change_deg": 1.3354532642352728
+          },
+          "right_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 2.10044591982725,
+            "p95_frame_change_deg": 0.9591875222082861
+          },
+          "right_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 2.888257327870615,
+            "p95_frame_change_deg": 2.5801484587804704
+          },
+          "right_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 1.3972724842912503,
+            "p95_frame_change_deg": 0.9339576380327567
+          },
+          "right_wrist_roll": {
+            "samples": 475,
+            "std_deg": 2.5095512040865633,
+            "p95_frame_change_deg": 2.203018539450499
+          },
+          "right_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.9756419233391266,
+            "p95_frame_change_deg": 0.6457945048340479
+          },
+          "waist_pitch": {
+            "samples": 475,
+            "std_deg": 0.5668347799849874,
+            "p95_frame_change_deg": 0.34508503091996245
+          },
+          "waist_roll": {
+            "samples": 475,
+            "std_deg": 0.3432895131947502,
+            "p95_frame_change_deg": 0.177776350355088
+          },
+          "waist_yaw": {
+            "samples": 475,
+            "std_deg": 0.6764214879525398,
+            "p95_frame_change_deg": 0.362142800956824
+          }
+        },
+        "median_p95_deg": 0.9339576380327567,
+        "median_std_deg": 0.8959327310244782
+      },
+      "full_filtered": {
+        "channels": {
+          "left_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 3.104855279832728,
+            "p95_frame_change_deg": 1.3971402473302974
+          },
+          "left_ankle_roll": {
+            "samples": 475,
+            "std_deg": 3.3449003780300326,
+            "p95_frame_change_deg": 1.3440929106328592
+          },
+          "left_elbow_flex": {
+            "samples": 475,
+            "std_deg": 0.703273838387854,
+            "p95_frame_change_deg": 0.3947156034900899
+          },
+          "left_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.5438688891737746,
+            "p95_frame_change_deg": 0.3829076782511133
+          },
+          "left_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.8926325873782889,
+            "p95_frame_change_deg": 0.15116736981695506
+          },
+          "left_hip_yaw": {
+            "samples": 475,
+            "std_deg": 2.083387263053438,
+            "p95_frame_change_deg": 1.1751071691337363
+          },
+          "left_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.6997660723231957,
+            "p95_frame_change_deg": 0.461064673908933
+          },
+          "left_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.723225776146404,
+            "p95_frame_change_deg": 0.5693224263688647
+          },
+          "left_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 0.8302421737172663,
+            "p95_frame_change_deg": 0.23042631810831984
+          },
+          "left_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 3.063581452366465,
+            "p95_frame_change_deg": 0.8802152089489002
+          },
+          "left_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 0.5244613564257983,
+            "p95_frame_change_deg": 0.3141816037698977
+          },
+          "left_wrist_roll": {
+            "samples": 475,
+            "std_deg": 2.1963151842535393,
+            "p95_frame_change_deg": 0.8523123234332362
+          },
+          "left_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.48274665474008943,
+            "p95_frame_change_deg": 0.18976152479442426
+          },
+          "right_ankle_pitch": {
+            "samples": 475,
+            "std_deg": 0.8052051968379365,
+            "p95_frame_change_deg": 0.576157249505478
+          },
+          "right_ankle_roll": {
+            "samples": 475,
+            "std_deg": 0.4391984505592648,
+            "p95_frame_change_deg": 0.3019683124480349
+          },
+          "right_elbow_flex": {
+            "samples": 475,
+            "std_deg": 1.4725295549639474,
+            "p95_frame_change_deg": 0.7334002849819053
+          },
+          "right_hip_pitch": {
+            "samples": 475,
+            "std_deg": 0.6430644208742247,
+            "p95_frame_change_deg": 0.6495178191568749
+          },
+          "right_hip_roll": {
+            "samples": 475,
+            "std_deg": 0.7291537092797669,
+            "p95_frame_change_deg": 0.1292237938508769
+          },
+          "right_hip_yaw": {
+            "samples": 475,
+            "std_deg": 2.7026934384430366,
+            "p95_frame_change_deg": 2.016899016081385
+          },
+          "right_knee_flex": {
+            "samples": 475,
+            "std_deg": 0.629878288839054,
+            "p95_frame_change_deg": 0.44630840465868493
+          },
+          "right_shoulder_pitch": {
+            "samples": 475,
+            "std_deg": 1.608470344054026,
+            "p95_frame_change_deg": 0.8463793181497364
+          },
+          "right_shoulder_roll": {
+            "samples": 475,
+            "std_deg": 2.098719257107417,
+            "p95_frame_change_deg": 0.5814296067994366
+          },
+          "right_shoulder_yaw": {
+            "samples": 475,
+            "std_deg": 2.8527157552049895,
+            "p95_frame_change_deg": 1.7682806710950945
+          },
+          "right_wrist_pitch": {
+            "samples": 475,
+            "std_deg": 1.3694713220336077,
+            "p95_frame_change_deg": 0.582491811332268
+          },
+          "right_wrist_roll": {
+            "samples": 475,
+            "std_deg": 2.4786379970082404,
+            "p95_frame_change_deg": 1.584913492135248
+          },
+          "right_wrist_yaw": {
+            "samples": 475,
+            "std_deg": 0.9585554770403513,
+            "p95_frame_change_deg": 0.38445442865817026
+          },
+          "waist_pitch": {
+            "samples": 475,
+            "std_deg": 0.5551695684870529,
+            "p95_frame_change_deg": 0.18852152189654922
+          },
+          "waist_roll": {
+            "samples": 475,
+            "std_deg": 0.3349512481697599,
+            "p95_frame_change_deg": 0.10756900709698718
+          },
+          "waist_yaw": {
+            "samples": 475,
+            "std_deg": 0.6686658774867889,
+            "p95_frame_change_deg": 0.20783973976043457
+          }
+        },
+        "median_p95_deg": 0.5693224263688647,
+        "median_std_deg": 0.8926325873782889
+      }
+    },
+    "median_p95_reduction_percent": {
+      "lite": 46.10318028974254,
+      "full": 39.041943318964876
+    },
+    "full_inference_median_ms_historical": 13.038250002864515
+  },
+  "paired_replay": {
+    "duration_s": 44.996000000009026,
+    "input_records": 1949,
+    "physics_steps": 22498,
+    "continuous_replay": {
+      "first_fall_s": null,
+      "max_tilt_deg": 4.5918235318277825,
+      "min_height_m": 0.731621040563944,
+      "max_clearance_m": [
+        0.020597455982467764,
+        0.02983743551782621
+      ],
+      "max_torque_limit_ratio": 0.9948850445318855,
+      "minimum_nonzero_active_speed_m_s": 0.35
+    },
+    "episodes": [
+      {
+        "episode": 1,
+        "start_s": 14.748000000001595,
+        "end_s": 16.68600000000163,
+        "paired_samples": 87,
+        "candidate_side_frames": {
+          "left": 28,
+          "none": 59
+        },
+        "old_max_clearance_m": [
+          0.018398882212006504,
+          0.015083842471447444
+        ],
+        "new_max_clearance_m": [
+          0.01947868824440944,
+          0.015885862717071837
+        ],
+        "previously_failed": false
+      },
+      {
+        "episode": 2,
+        "start_s": 16.854000000001538,
+        "end_s": 19.03000000000033,
+        "paired_samples": 106,
+        "candidate_side_frames": {
+          "right": 46,
+          "none": 60
+        },
+        "old_max_clearance_m": [
+          -0.0005888526292169771,
+          -0.0005600859580117854
+        ],
+        "new_max_clearance_m": [
+          0.014651727406374142,
+          0.015400111102291714
+        ],
+        "previously_failed": true
+      },
+      {
+        "episode": 3,
+        "start_s": 24.315999999997402,
+        "end_s": 28.911999999994855,
+        "paired_samples": 215,
+        "candidate_side_frames": {
+          "left": 51,
+          "none": 117,
+          "right": 47
+        },
+        "old_max_clearance_m": [
+          0.013596997735881078,
+          0.018381679323128074
+        ],
+        "new_max_clearance_m": [
+          0.020597455982467764,
+          0.029564205285385867
+        ],
+        "previously_failed": false
+      },
+      {
+        "episode": 4,
+        "start_s": 29.10199999999475,
+        "end_s": 31.06599999999366,
+        "paired_samples": 95,
+        "candidate_side_frames": {
+          "left": 37,
+          "none": 58
+        },
+        "old_max_clearance_m": [
+          0.019356771699205178,
+          0.027696308286290442
+        ],
+        "new_max_clearance_m": [
+          0.01924142211338264,
+          0.014696593267107882
+        ],
+        "previously_failed": false
+      },
+      {
+        "episode": 5,
+        "start_s": 31.19399999999359,
+        "end_s": 33.2719999999947,
+        "paired_samples": 102,
+        "candidate_side_frames": {
+          "right": 42,
+          "none": 60
+        },
+        "old_max_clearance_m": [
+          -0.0005494452870894615,
+          -0.0005001029925172954
+        ],
+        "new_max_clearance_m": [
+          0.015174655628735621,
+          0.01473831910820202
+        ],
+        "previously_failed": true
+      },
+      {
+        "episode": 6,
+        "start_s": 34.46799999999616,
+        "end_s": 38.15600000000067,
+        "paired_samples": 172,
+        "candidate_side_frames": {
+          "left": 111,
+          "none": 61
+        },
+        "old_max_clearance_m": [
+          0.013035151627694471,
+          0.01819420007346396
+        ],
+        "new_max_clearance_m": [
+          0.01985165364497161,
+          0.019923210614286795
+        ],
+        "previously_failed": false
+      },
+      {
+        "episode": 7,
+        "start_s": 38.38000000000094,
+        "end_s": 40.18800000000315,
+        "paired_samples": 91,
+        "candidate_side_frames": {
+          "right": 29,
+          "none": 62
+        },
+        "old_max_clearance_m": [
+          0.016723803258003284,
+          0.019496520699691874
+        ],
+        "new_max_clearance_m": [
+          0.016517737618477614,
+          0.018483536936656057
+        ],
+        "previously_failed": false
+      }
+    ]
+  },
+  "stress": {
+    "before": {
+      "duration_s": 23.227999999998005,
+      "fallen": true,
+      "max_observed_tilt_deg": 40.701677747953006,
+      "min_observed_height_m": 0.44506127868865913,
+      "logged_points_including_terminal": 234
+    },
+    "after": {
+      "duration_s": 180.00000000013137,
+      "fallen": false,
+      "max_observed_tilt_deg": 11.67004724463123,
+      "min_observed_height_m": 0.7609631302214558,
+      "logged_points_including_terminal": 1801
+    },
+    "note": "Historical single runs, 0.1s records plus terminal state. Before code version not fully archived."
+  },
+  "live": {
+    "date": "2026-10-12",
+    "seconds": 25.0,
+    "physical_steps": 12495,
+    "status_snapshots": 49,
+    "clearance_cm": [
+      1.9844917758665375,
+      1.8087373705041914
+    ],
+    "foot_unloaded_s": [
+      3.112,
+      2.924
+    ],
+    "phase_seconds": {
+      "STANDING": 8.032,
+      "PREPARING STEP": 1.956,
+      "STEPPING": 12.012,
+      "SETTLING": 2.99
+    },
+    "continuous_physics": {
+      "samples": 12495,
+      "first_simulation_s": 11.706000000000579,
+      "last_simulation_s": 36.69399999999888,
+      "max_sample_gap_s": 0.0020000000000024443,
+      "first_wall_clock_s": 31571.746277,
+      "last_wall_clock_s": 31596.7106185,
+      "phase_samples": {
+        "STANDING": 4016,
+        "PREPARING STEP": 978,
+        "STEPPING": 6006,
+        "SETTLING": 1495
+      },
+      "any_fall": false,
+      "min_pelvis_height_m": 0.7267643391975066,
+      "max_pelvis_tilt_deg": 6.127019617897738,
+      "min_total_foot_load_n": 176.19148934203702,
+      "max_total_foot_load_n": 1083.404604429357,
+      "max_other_floor_contacts": 0,
+      "max_external_force": 0.0,
+      "max_applied_body_force": 0.0,
+      "max_torque_limit_ratio": 1.0,
+      "foot_clearance_max_m": [
+        0.019844917758665374,
+        0.018087373705041914
+      ],
+      "foot_unloaded_samples": [
+        1556,
+        1462
+      ]
+    },
+    "feet_hidden_status_snapshots": 3
+  },
+  "claim_limits": [
+    "No ground-truth pose accuracy measurement.",
+    "No end-to-end latency measurement.",
+    "No own-model training loss or learning curve in this engineering record.",
+    "Matched observations are temporally correlated, not independent repeats.",
+    "Historical records and current offline replay are labelled separately."
+  ]
+}

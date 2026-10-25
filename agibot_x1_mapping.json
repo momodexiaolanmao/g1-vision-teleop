@@ -1,0 +1,41 @@
+{
+  "description": "智元灵犀 X1 双臂动作跟随：肩部侧向抬臂及肘部弯曲",
+  "display_name": "AgiBot X1: shoulders and elbows",
+  "confidence": 0.6,
+  "smoothing_seconds": 0.10,
+  "viewer": {"azimuth": 145, "elevation": -12, "distance": 2.6, "lookat": [0, 0, 0.75]},
+  "rules": [
+    {
+      "label": "左肩抬臂 → X1 左肩",
+      "source": {"type": "angle", "landmarks": ["left_hip", "left_shoulder", "left_elbow"], "space": "world"},
+      "robot_joint": "left_shoulder_roll_joint",
+      "actuator": "left_shoulder_roll_servo",
+      "human_range_deg": [0, 110], "robot_range_deg": [-5, -95],
+      "offset_deg": 0, "max_speed_deg_s": 75
+    },
+    {
+      "label": "右肩抬臂 → X1 右肩",
+      "source": {"type": "angle", "landmarks": ["right_hip", "right_shoulder", "right_elbow"], "space": "world"},
+      "robot_joint": "right_shoulder_roll_joint",
+      "actuator": "right_shoulder_roll_servo",
+      "human_range_deg": [0, 110], "robot_range_deg": [-5, -95],
+      "offset_deg": 0, "max_speed_deg_s": 75
+    },
+    {
+      "label": "左肘弯曲 → X1 左肘",
+      "source": {"type": "angle", "landmarks": ["left_shoulder", "left_elbow", "left_wrist"], "space": "world"},
+      "robot_joint": "left_elbow_pitch_joint",
+      "actuator": "left_elbow_pitch_servo",
+      "human_range_deg": [40, 180], "robot_range_deg": [95, 0],
+      "offset_deg": 0, "max_speed_deg_s": 90
+    },
+    {
+      "label": "右肘弯曲 → X1 右肘",
+      "source": {"type": "angle", "landmarks": ["right_shoulder", "right_elbow", "right_wrist"], "space": "world"},
+      "robot_joint": "right_elbow_pitch_joint",
+      "actuator": "right_elbow_pitch_servo",
+      "human_range_deg": [40, 180], "robot_range_deg": [95, 0],
+      "offset_deg": 0, "max_speed_deg_s": 90
+    }
+  ]
+}

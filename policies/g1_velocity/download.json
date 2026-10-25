@@ -1,0 +1,18 @@
+{
+  "name": "policy.onnx",
+  "path": "deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx",
+  "sha": "c50bb5f6b11d7f464ff6799a78987a12ce68fb97",
+  "size": 1658204,
+  "url": "https://api.github.com/repos/unitreerobotics/unitree_rl_lab/contents/deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx?ref=4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+  "html_url": "https://github.com/unitreerobotics/unitree_rl_lab/blob/4960b84732b0c2ec593dccbfe963fda1bcd7b1e3/deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx",
+  "git_url": "https://api.github.com/repos/unitreerobotics/unitree_rl_lab/git/blobs/c50bb5f6b11d7f464ff6799a78987a12ce68fb97",
+  "download_url": "https://raw.githubusercontent.com/unitreerobotics/unitree_rl_lab/4960b84732b0c2ec593dccbfe963fda1bcd7b1e3/deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx",
+  "type": "file",
+  "content": "",
+  "encoding": "none",
+  "_links": {
+    "self": "https://api.github.com/repos/unitreerobotics/unitree_rl_lab/contents/deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx?ref=4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+    "git": "https://api.github.com/repos/unitreerobotics/unitree_rl_lab/git/blobs/c50bb5f6b11d7f464ff6799a78987a12ce68fb97",
+    "html": "https://github.com/unitreerobotics/unitree_rl_lab/blob/4960b84732b0c2ec593dccbfe963fda1bcd7b1e3/deploy/robots/g1_29dof/config/policy/velocity/v0/exported/policy.onnx"
+  }
+}

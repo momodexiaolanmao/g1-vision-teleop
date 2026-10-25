@@ -1,0 +1,53 @@
+<mujoco model="camera_teleop_arm">
+  <compiler angle="radian"/>
+  <option timestep="0.002" integrator="implicitfast"/>
+  <visual>
+    <global offwidth="960" offheight="720"/>
+  </visual>
+  <default>
+    <joint damping="1.2" armature="0.02" limited="true"/>
+    <geom density="650" friction="0.8 0.1 0.1"/>
+  </default>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="256" height="256"
+             rgb1="0.15 0.19 0.24" rgb2="0.21 0.25 0.30"/>
+    <material name="floor" texture="grid" texrepeat="6 6"/>
+  </asset>
+  <worldbody>
+    <light pos="0 -1 2" dir="0 0 -1" diffuse="0.9 0.9 0.9"/>
+    <geom type="plane" size="1.5 1.5 0.1" material="floor"/>
+    <camera name="overview" pos="1.15 -1.25 0.95" xyaxes="0.74 0.67 0 -0.28 0.31 0.91"/>
+    <body name="base_fixed" pos="0 0 0.08">
+      <geom name="base" type="cylinder" size="0.09 0.08" rgba="0.3 0.35 0.4 1"/>
+    </body>
+    <body name="turntable" pos="0 0 0.18" gravcomp="1">
+      <joint name="base_yaw" axis="0 0 1" range="-1.5 1.5"/>
+      <geom type="cylinder" size="0.055 0.025" rgba="0.3 0.6 0.9 1"/>
+      <body name="upper_arm" gravcomp="1">
+        <joint name="shoulder" axis="0 1 0" range="-2.4 0.8"/>
+        <geom type="capsule" fromto="0 0 0 0.32 0 0" size="0.027" rgba="0.2 0.65 0.92 1"/>
+        <body name="forearm" pos="0.32 0 0" gravcomp="1">
+          <joint name="elbow" axis="0 1 0" range="-2.4 2.4"/>
+          <geom type="capsule" fromto="0 0 0 0.28 0 0" size="0.023" rgba="0.15 0.8 0.65 1"/>
+          <site name="tool" pos="0.28 0 0" size="0.018" rgba="1 0.7 0.2 1"/>
+        </body>
+      </body>
+    </body>
+    <body name="target" mocap="true" pos="0.45 0 0.22">
+      <geom type="sphere" size="0.018" rgba="1 0.35 0.25 0.65" contype="0" conaffinity="0"/>
+    </body>
+  </worldbody>
+  <contact>
+    <!-- Mounted parts meet at the bearing; their overlap is not an obstacle. -->
+    <exclude body1="base_fixed" body2="turntable"/>
+    <exclude body1="base_fixed" body2="upper_arm"/>
+  </contact>
+  <actuator>
+    <position name="base_servo" joint="base_yaw" kp="180" kv="25" ctrlrange="-1.5 1.5" forcerange="-80 80"/>
+    <position name="shoulder_servo" joint="shoulder" kp="220" kv="28" ctrlrange="-2.4 0.8" forcerange="-100 100"/>
+    <position name="elbow_servo" joint="elbow" kp="140" kv="18" ctrlrange="-2.4 2.4" forcerange="-60 60"/>
+  </actuator>
+  <keyframe>
+    <key name="home" qpos="0 -0.7 1.4" ctrl="0 -0.7 1.4"/>
+  </keyframe>
+</mujoco>

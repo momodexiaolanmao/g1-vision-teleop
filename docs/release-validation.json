@@ -1,0 +1,43 @@
+{
+  "group": "full",
+  "modules": [
+    "test_tracking_input",
+    "test_pose_quality",
+    "test_subject_tracking",
+    "test_calibration_workflow",
+    "test_sampling_session",
+    "test_live_status",
+    "test.test_twist2_camera",
+    "test_g1_physics",
+    "test_footsteps"
+  ],
+  "tests_run": 76,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_recorded_right_steps_keep_nonzero_velocity_and_real_clearance (test_footsteps.FootstepTests.test_recorded_right_steps_keep_nonzero_velocity_and_real_clearance)",
+      "reason": "Recorded field regression is unavailable in this package"
+    },
+    {
+      "test": "test_stationary_recorded_camera_does_not_start_steps (test_footsteps.FootstepTests.test_stationary_recorded_camera_does_not_start_steps)",
+      "reason": "Private camera landmark fixture is intentionally not distributed"
+    }
+  ],
+  "successful": true,
+  "python": "3.14.7",
+  "date": "2026-10-25",
+  "environment": "Windows, Python 3.14.7; existing project runtime dependencies",
+  "passed": 74,
+  "scope": "Public source copy; synthetic interfaces and physical regression; no new live-camera validation",
+  "private_data": "Camera video, raw landmark fixtures and field JSONL excluded",
+  "clean_checkout_quick_regression": {
+    "tests_run": 58,
+    "passed": 58,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "local_pose_weights_present": false,
+    "dependencies": "existing project runtime, not a fresh pip install"
+  }
+}

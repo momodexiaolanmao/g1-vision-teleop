@@ -1,0 +1,588 @@
+{
+  "description": "TWIST2 full-body physical pose tracking around calibrated neutral. Leg references use a 30-degree coordinated envelope; root translation is not inferred from a monocular camera.",
+  "display_name": "EXPERIMENTAL TWIST2 camera tracking - live dynamic test failed",
+  "control_mode": "tracking",
+  "confidence": 0.6,
+  "smoothing_seconds": 0.07,
+  "viewer": {
+    "azimuth": 150,
+    "elevation": -10,
+    "distance": 3.6,
+    "lookat": [
+      0,
+      0,
+      0.8
+    ]
+  },
+  "rules": [
+    {
+      "label": "左髋前后摆",
+      "source": {
+        "type": "retarget",
+        "channel": "left_hip_pitch"
+      },
+      "robot_joint": "left_hip_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_hip_pitch_joint"
+    },
+    {
+      "label": "左髋侧摆",
+      "source": {
+        "type": "retarget",
+        "channel": "left_hip_roll"
+      },
+      "robot_joint": "left_hip_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_hip_roll_joint"
+    },
+    {
+      "label": "左大腿旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "left_hip_yaw"
+      },
+      "robot_joint": "left_hip_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_hip_yaw_joint"
+    },
+    {
+      "label": "左膝弯曲",
+      "source": {
+        "type": "retarget",
+        "channel": "left_knee_flex"
+      },
+      "robot_joint": "left_knee_joint",
+      "human_range_deg": [
+        0,
+        165
+      ],
+      "robot_range_deg": [
+        0,
+        165
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_knee_joint"
+    },
+    {
+      "label": "左踝前后倾",
+      "source": {
+        "type": "retarget",
+        "channel": "left_ankle_pitch"
+      },
+      "robot_joint": "left_ankle_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_ankle_pitch_joint"
+    },
+    {
+      "label": "左踝侧倾",
+      "source": {
+        "type": "retarget",
+        "channel": "left_ankle_roll"
+      },
+      "robot_joint": "left_ankle_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_ankle_roll_joint"
+    },
+    {
+      "label": "右髋前后摆",
+      "source": {
+        "type": "retarget",
+        "channel": "right_hip_pitch"
+      },
+      "robot_joint": "right_hip_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_hip_pitch_joint"
+    },
+    {
+      "label": "右髋侧摆",
+      "source": {
+        "type": "retarget",
+        "channel": "right_hip_roll"
+      },
+      "robot_joint": "right_hip_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_hip_roll_joint"
+    },
+    {
+      "label": "右大腿旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "right_hip_yaw"
+      },
+      "robot_joint": "right_hip_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_hip_yaw_joint"
+    },
+    {
+      "label": "右膝弯曲",
+      "source": {
+        "type": "retarget",
+        "channel": "right_knee_flex"
+      },
+      "robot_joint": "right_knee_joint",
+      "human_range_deg": [
+        0,
+        165
+      ],
+      "robot_range_deg": [
+        0,
+        165
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_knee_joint"
+    },
+    {
+      "label": "右踝前后倾",
+      "source": {
+        "type": "retarget",
+        "channel": "right_ankle_pitch"
+      },
+      "robot_joint": "right_ankle_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_ankle_pitch_joint"
+    },
+    {
+      "label": "右踝侧倾",
+      "source": {
+        "type": "retarget",
+        "channel": "right_ankle_roll"
+      },
+      "robot_joint": "right_ankle_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_ankle_roll_joint"
+    },
+    {
+      "label": "腰部扭转",
+      "source": {
+        "type": "retarget",
+        "channel": "waist_yaw"
+      },
+      "robot_joint": "waist_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "waist_yaw_joint"
+    },
+    {
+      "label": "腰部侧倾",
+      "source": {
+        "type": "retarget",
+        "channel": "waist_roll"
+      },
+      "robot_joint": "waist_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "waist_roll_joint"
+    },
+    {
+      "label": "腰部前倾",
+      "source": {
+        "type": "retarget",
+        "channel": "waist_pitch"
+      },
+      "robot_joint": "waist_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "waist_pitch_joint"
+    },
+    {
+      "label": "左肩前后抬臂",
+      "source": {
+        "type": "retarget",
+        "channel": "left_shoulder_pitch"
+      },
+      "robot_joint": "left_shoulder_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "left_shoulder_pitch_joint"
+    },
+    {
+      "label": "左肩侧抬臂",
+      "source": {
+        "type": "retarget",
+        "channel": "left_shoulder_roll"
+      },
+      "robot_joint": "left_shoulder_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "left_shoulder_roll_joint"
+    },
+    {
+      "label": "左上臂旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "left_shoulder_yaw"
+      },
+      "robot_joint": "left_shoulder_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "left_shoulder_yaw_joint"
+    },
+    {
+      "label": "左肘弯曲",
+      "source": {
+        "type": "retarget",
+        "channel": "left_elbow_flex"
+      },
+      "robot_joint": "left_elbow_joint",
+      "human_range_deg": [
+        0,
+        150
+      ],
+      "robot_range_deg": [
+        90,
+        -60
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_elbow_joint"
+    },
+    {
+      "label": "左手腕旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "left_wrist_roll"
+      },
+      "robot_joint": "left_wrist_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_wrist_roll_joint"
+    },
+    {
+      "label": "左手腕屈伸",
+      "source": {
+        "type": "retarget",
+        "channel": "left_wrist_pitch"
+      },
+      "robot_joint": "left_wrist_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_wrist_pitch_joint"
+    },
+    {
+      "label": "左手腕侧摆",
+      "source": {
+        "type": "retarget",
+        "channel": "left_wrist_yaw"
+      },
+      "robot_joint": "left_wrist_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "left_wrist_yaw_joint"
+    },
+    {
+      "label": "右肩前后抬臂",
+      "source": {
+        "type": "retarget",
+        "channel": "right_shoulder_pitch"
+      },
+      "robot_joint": "right_shoulder_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "right_shoulder_pitch_joint"
+    },
+    {
+      "label": "右肩侧抬臂",
+      "source": {
+        "type": "retarget",
+        "channel": "right_shoulder_roll"
+      },
+      "robot_joint": "right_shoulder_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "right_shoulder_roll_joint"
+    },
+    {
+      "label": "右上臂旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "right_shoulder_yaw"
+      },
+      "robot_joint": "right_shoulder_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 240,
+      "actuator": "right_shoulder_yaw_joint"
+    },
+    {
+      "label": "右肘弯曲",
+      "source": {
+        "type": "retarget",
+        "channel": "right_elbow_flex"
+      },
+      "robot_joint": "right_elbow_joint",
+      "human_range_deg": [
+        0,
+        150
+      ],
+      "robot_range_deg": [
+        90,
+        -60
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_elbow_joint"
+    },
+    {
+      "label": "右手腕旋转",
+      "source": {
+        "type": "retarget",
+        "channel": "right_wrist_roll"
+      },
+      "robot_joint": "right_wrist_roll_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_wrist_roll_joint"
+    },
+    {
+      "label": "右手腕屈伸",
+      "source": {
+        "type": "retarget",
+        "channel": "right_wrist_pitch"
+      },
+      "robot_joint": "right_wrist_pitch_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_wrist_pitch_joint"
+    },
+    {
+      "label": "右手腕侧摆",
+      "source": {
+        "type": "retarget",
+        "channel": "right_wrist_yaw"
+      },
+      "robot_joint": "right_wrist_yaw_joint",
+      "human_range_deg": [
+        -180,
+        180
+      ],
+      "robot_range_deg": [
+        -180,
+        180
+      ],
+      "offset_deg": 0,
+      "max_speed_deg_s": 180,
+      "actuator": "right_wrist_yaw_joint"
+    }
+  ],
+  "pose_quality": {
+    "enabled": true,
+    "neutral_correction": true,
+    "max_angular_speed_deg_s": 650,
+    "min_cutoff_hz": 3,
+    "deadband_deg": 1.5
+  },
+  "tracking": {
+    "max_leg_reference_offset_deg": 30,
+    "max_reference_offset_deg": 60,
+    "reference_blend_seconds": 0.12,
+    "root_height_range_m": [
+      0.6,
+      0.92
+    ],
+    "policy_frequency": 100,
+    "upper_body_speed_deg_s": 120
+  }
+}

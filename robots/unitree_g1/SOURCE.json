@@ -1,0 +1,16 @@
+{
+  "upstream_repository": "https://github.com/unitreerobotics/unitree_mujoco",
+  "upstream_commit": "1eb6642e3f3fdfb7fb13a9794fd6a2dd93ea0e7d",
+  "upstream_model": "unitree_robots/g1/g1_29dof.xml",
+  "license": "BSD-3-Clause (see LICENSE)",
+  "mesh_files": 36,
+  "hinge_joints": 29,
+  "free_root": true,
+  "simulation_changes": [
+    "position actuator definitions",
+    "neutral home keyframe",
+    "floor and lights"
+  ],
+  "execution_mode": "Kinematic qpos preview; dynamics and balance are not integrated",
+  "model_variant": "Official G1 29dof; not a separately verified G1 Pro SKU or finger-hand model"
+}

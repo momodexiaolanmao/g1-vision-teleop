@@ -1,0 +1,24 @@
+{
+  "robot": "AgiBot / 智元灵犀 X1",
+  "upstream_repository": "https://github.com/AgibotTech/agibot_x1_infer",
+  "upstream_commit": "9e0b818804d644fb9c9663e932dd33b03b24dfa4",
+  "upstream_model": "src/module/sim_module/model/mjcf/robot/xyber_x1/xyber_x1_serial.xml",
+  "license": "Mulan PSL v2 (see LICENSE.txt)",
+  "mesh_files": 30,
+  "simulation_changes": [
+    "fixed pelvis",
+    "gravity compensation",
+    "position servos with original motor force limits",
+    "neutral keyframe",
+    "floor and lighting",
+    "removed foot diagnostic markers"
+  ],
+  "joint_count": 29,
+  "actuator_count": 29,
+  "default_mapped_joints": [
+    "left_shoulder_roll_joint",
+    "right_shoulder_roll_joint",
+    "left_elbow_pitch_joint",
+    "right_elbow_pitch_joint"
+  ]
+}

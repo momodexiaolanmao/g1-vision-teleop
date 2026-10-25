@@ -1,0 +1,5 @@
+mujoco==3.15.0
+mediapipe==1.1.0
+opencv-contrib-python==5.0.0.93
+numpy>=2,<3
+pillow==12.3.0

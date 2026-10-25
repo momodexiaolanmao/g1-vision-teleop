@@ -1,0 +1,49 @@
+{
+  "description": "Edit rules to choose human landmarks and robot hinge joints. Angles are degrees.",
+  "confidence": 0.6,
+  "smoothing_seconds": 0.12,
+  "rules": [
+    {
+      "label": "Left shoulder raise -> base rotation",
+      "source": {
+        "type": "angle",
+        "landmarks": ["left_hip", "left_shoulder", "left_elbow"],
+        "space": "world"
+      },
+      "robot_joint": "base_yaw",
+      "actuator": "base_servo",
+      "human_range_deg": [0, 120],
+      "robot_range_deg": [-60, 60],
+      "offset_deg": 0,
+      "max_speed_deg_s": 60
+    },
+    {
+      "label": "Right shoulder raise -> arm shoulder",
+      "source": {
+        "type": "angle",
+        "landmarks": ["right_hip", "right_shoulder", "right_elbow"],
+        "space": "world"
+      },
+      "robot_joint": "shoulder",
+      "actuator": "shoulder_servo",
+      "human_range_deg": [0, 150],
+      "robot_range_deg": [-10, -110],
+      "offset_deg": 0,
+      "max_speed_deg_s": 60
+    },
+    {
+      "label": "Right elbow bend -> robot elbow",
+      "source": {
+        "type": "angle",
+        "landmarks": ["right_shoulder", "right_elbow", "right_wrist"],
+        "space": "world"
+      },
+      "robot_joint": "elbow",
+      "actuator": "elbow_servo",
+      "human_range_deg": [30, 180],
+      "robot_range_deg": [120, 0],
+      "offset_deg": 0,
+      "max_speed_deg_s": 60
+    }
+  ]
+}

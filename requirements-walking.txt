@@ -1,0 +1,2 @@
+onnxruntime==1.31.0
+protobuf>=4.25.8

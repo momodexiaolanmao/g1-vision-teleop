@@ -1,0 +1,46 @@
+# Environments, Python caches and generated runtime data
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+artifacts/*
+!artifacts/.gitkeep
+models/*
+!models/README.md
+downloads*/
+vendor/
+.tmp*/
+*.part[0-9]*
+*.download
+*.complete
+*.jsonl
+*.log
+
+# Personal captures and private field fixtures
+*.mp4
+*.mov
+*.avi
+*.webm
+fixtures/stationary_feet.json
+live_status.*
+*.zip
+*.pptx
+!docs/course/视觉遥操作_答辩PPT_公开版.pptx
+
+# Authentication and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+hosts.yml
+.auth/
+auth/
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

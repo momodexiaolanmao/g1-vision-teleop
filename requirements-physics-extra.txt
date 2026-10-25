@@ -1,0 +1,3 @@
+# Optional alternative QP backend; the default standing controller uses NumPy.
+scipy==1.18.1
+osqp==1.1.3

@@ -1,0 +1,28 @@
+{
+  "all_source_hashes_match": true,
+  "png_dimensions": {
+    "01_单人配置_同帧对照.png": [
+      3200,
+      1800
+    ],
+    "02_角度过滤_同帧对照.png": [
+      3200,
+      1800
+    ],
+    "03_步态修复_配对回放.png": [
+      3200,
+      1800
+    ],
+    "04_运控稳定性_历史压力测试.png": [
+      3200,
+      1800
+    ],
+    "05_真人复测_物理结果.png": [
+      3200,
+      1800
+    ]
+  },
+  "pdf_pages": 8,
+  "pdf_visual_review": "All 8 rendered pages inspected; no clipping, overlaps or missing Chinese glyphs.",
+  "notes_links_exist": true
+}

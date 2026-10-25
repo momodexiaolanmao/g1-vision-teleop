@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/unitreerobotics/unitree_rl_lab",
+  "commit": "4960b84732b0c2ec593dccbfe963fda1bcd7b1e3",
+  "path": "deploy/robots/g1_29dof/config/policy/velocity/v0",
+  "policy_sha256": "610c27e463a8f666aa50a06346678c00b4df3859f10b54bcc1f817c28251406f",
+  "license": "Apache-2.0",
+  "adaptation": "Local MuJoCo CPU inference; upper-body references are a separate tested simulation adaptation, not part of the policy training."
+}

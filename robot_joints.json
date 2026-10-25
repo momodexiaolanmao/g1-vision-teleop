@@ -1,0 +1,35 @@
+[
+  {
+    "joint": "base_yaw",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "base_servo"
+    ],
+    "range_deg": [
+      -85.94366926962348,
+      85.94366926962348
+    ]
+  },
+  {
+    "joint": "shoulder",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "shoulder_servo"
+    ],
+    "range_deg": [
+      -137.50987083139756,
+      45.836623610465864
+    ]
+  },
+  {
+    "joint": "elbow",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "elbow_servo"
+    ],
+    "range_deg": [
+      -137.50987083139756,
+      137.50987083139756
+    ]
+  }
+]

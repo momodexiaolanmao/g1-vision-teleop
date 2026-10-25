@@ -1,0 +1,321 @@
+[
+  {
+    "joint": "lumbar_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "lumbar_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "lumbar_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "lumbar_roll_servo"
+    ],
+    "range_deg": [
+      -28.64788975654116,
+      28.64788975654116
+    ]
+  },
+  {
+    "joint": "lumbar_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "lumbar_pitch_servo"
+    ],
+    "range_deg": [
+      -17.188733853924695,
+      89.95437383553924
+    ]
+  },
+  {
+    "joint": "left_shoulder_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_shoulder_pitch_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_shoulder_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_shoulder_roll_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      0.0
+    ]
+  },
+  {
+    "joint": "left_shoulder_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_shoulder_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_elbow_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_elbow_pitch_servo"
+    ],
+    "range_deg": [
+      0.0,
+      97.40282517223994
+    ]
+  },
+  {
+    "joint": "left_elbow_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_elbow_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_wrist_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_wrist_pitch_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_wrist_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_wrist_roll_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_shoulder_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_shoulder_pitch_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_shoulder_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_shoulder_roll_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      0.0
+    ]
+  },
+  {
+    "joint": "right_shoulder_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_shoulder_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_elbow_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_elbow_pitch_servo"
+    ],
+    "range_deg": [
+      0.0,
+      97.40282517223994
+    ]
+  },
+  {
+    "joint": "right_elbow_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_elbow_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_wrist_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_wrist_pitch_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_wrist_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_wrist_roll_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_hip_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_hip_pitch_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      359.817495342157
+    ]
+  },
+  {
+    "joint": "left_hip_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_hip_roll_servo"
+    ],
+    "range_deg": [
+      -131.78029288008932,
+      45.836623610465864
+    ]
+  },
+  {
+    "joint": "left_hip_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_hip_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "left_knee_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_knee_pitch_servo"
+    ],
+    "range_deg": [
+      0.0,
+      103.13240312354819
+    ]
+  },
+  {
+    "joint": "left_ankle_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_ankle_pitch_servo"
+    ],
+    "range_deg": [
+      -57.29577951308232,
+      57.29577951308232
+    ]
+  },
+  {
+    "joint": "left_ankle_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "left_ankle_roll_servo"
+    ],
+    "range_deg": [
+      -57.29577951308232,
+      57.29577951308232
+    ]
+  },
+  {
+    "joint": "right_hip_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_hip_pitch_servo"
+    ],
+    "range_deg": [
+      -359.817495342157,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_hip_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_hip_roll_servo"
+    ],
+    "range_deg": [
+      -45.836623610465864,
+      131.78029288008932
+    ]
+  },
+  {
+    "joint": "right_hip_yaw_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_hip_yaw_servo"
+    ],
+    "range_deg": [
+      -179.9087476710785,
+      179.9087476710785
+    ]
+  },
+  {
+    "joint": "right_knee_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_knee_pitch_servo"
+    ],
+    "range_deg": [
+      0.0,
+      103.13240312354819
+    ]
+  },
+  {
+    "joint": "right_ankle_pitch_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_ankle_pitch_servo"
+    ],
+    "range_deg": [
+      -57.29577951308232,
+      57.29577951308232
+    ]
+  },
+  {
+    "joint": "right_ankle_roll_joint",
+    "type": "mjJNT_HINGE",
+    "actuators": [
+      "right_ankle_roll_servo"
+    ],
+    "range_deg": [
+      -57.29577951308232,
+      57.29577951308232
+    ]
+  }
+]
